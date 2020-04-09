@@ -1,0 +1,38 @@
+$form-width: 600px;
+$info-width: 1200px;
+
+div[class$="manage-container"], .personal-center-container {
+  .manage-title {
+    font-size: 18px;
+  }
+
+  .el-form {
+    max-width: $form-width;
+    margin: 0 auto;
+
+    .el-select, .el-cascader {
+      width: 100%;
+    }
+  }
+
+  .form-footer {
+    display: flex;
+    justify-content: flex-end;
+    max-width: $form-width;
+    margin: 15px auto;
+  }
+
+  .info-show {
+    max-width: $info-width;
+    margin: 0 auto;
+
+    .el-row {
+      text-align: left;
+
+      .el-col {
+            margin: 10px 0;
+      }
+    }
+  }
+
+}

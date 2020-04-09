@@ -1,0 +1,33 @@
+// 上传样式
+$length: 100px;
+
+.upload-limited {
+    .el-upload--picture-card {
+        display: none;
+    }
+}
+
+.card-upload {
+    .el-upload--picture-card {
+        height: $length;
+        width: $length;
+        line-height: $length;
+    }
+
+    .el-upload-list--picture-card {
+        .el-upload-list__item {
+            height: $length;
+            width: $length;
+
+            .el-progress {
+                height: $length * 0.9;
+                width: $length * 0.9;
+
+                .el-progress-circle {
+                    height: 100% !important;
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

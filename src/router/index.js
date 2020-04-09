@@ -1,27 +1,19 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import sign from './sign';
+import common from "./common";
+import app from "./app";
 
-Vue.use(VueRouter)
+// 使用路由插件
+Vue.use(Router);
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+// 路由列表
+const routes = [
+    ...common,  // 通用
+    ...sign,    // 登录，注册
+    ...app  // App
+];
 
-const router = new VueRouter({
-  routes
+export default new Router({
+    routes
 })
-
-export default router
